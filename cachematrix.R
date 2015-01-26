@@ -21,7 +21,7 @@ makeCacheMatrix <- function(M = matrix()) {
     setinv <- function(inv) inverse <<- inv;
     getinv <- function() return(inverse);
     return(list(set = set, get = get, setinv = setinv, getinv = getinv))
-}
+}##makeCacheMatrix
 
 
 ## This is the second function cacheSolve as explained above.
@@ -36,4 +36,4 @@ cacheSolve <- function(M, ...) {
     invserse <- solve(data, ...)
     M$setinv(inverse)
     return(inverse)
-}
+}##cacheSolve
